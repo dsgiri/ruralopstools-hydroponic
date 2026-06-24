@@ -4,12 +4,12 @@ export function Footer({ onNavigate }: { onNavigate?: (view: string) => void }) 
       <div>
         <span className="italic">Disclaimer: Calculations are based on generalized agricultural models. Verify with your agronomist.</span>
       </div>
-      <div className="flex gap-4">
-        <button onClick={() => onNavigate?.('legal')} className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Privacy Policy</button>
-        <button onClick={() => onNavigate?.('legal')} className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Terms</button>
-        <button onClick={() => onNavigate?.('legal')} className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Legal Disclaimers</button>
-        <button onClick={() => onNavigate?.('contact')} className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Contact</button>
-        <button onClick={() => onNavigate?.('about')} className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">About RUC</button>
+      <div className="flex gap-4 flex-wrap justify-center md:justify-end">
+        <a href="https://www.ruralutilitycost.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Privacy Policy</a>
+        <a href="https://www.ruralutilitycost.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Terms</a>
+        <a href="https://www.ruralutilitycost.com/disclaimer" target="_blank" rel="noopener noreferrer" className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Disclaimer</a>
+        <a href="https://www.ruralutilitycost.com/contact" target="_blank" rel="noopener noreferrer" className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Contact</a>
+        <a href="https://ruralutilitycost.com/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-600 transition-colors uppercase tracking-widest font-bold">Parent Site</a>
       </div>
     </footer>
   );

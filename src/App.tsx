@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
-import { AdUnit } from '@/components/AdUnit';
 import { CookieBanner } from '@/components/CookieBanner';
 import { trackEvent } from '@/utils';
 
@@ -127,27 +126,14 @@ export default function App() {
               onCloseMobile={() => setIsMobileMenuOpen(false)}
             />
           </div>
-          {/* Sidebar Ad Unit */}
-          <div className="p-4 hidden xl:block border-t border-slate-200">
-             <AdUnit slotId="SIDEBAR_AD" format="rectangle" />
-          </div>
         </div>
         
         {/* Main Content */}
-        <div className="flex-1 overflow-y-auto flex flex-col">
-          <div className="w-full max-w-[1400px] mx-auto px-6 pt-4">
-             {/* Header Ad Unit */}
-             <AdUnit slotId="HEADER_AD" format="auto" />
-          </div>
+        <div className="flex-1 overflow-y-auto flex flex-col pt-4">
           
           <main id="main-content" tabIndex={-1} className="flex-1 px-6 pb-6 w-full max-w-[1400px] mx-auto z-0 outline-none">
             {renderView()}
           </main>
-          
-          <div className="w-full max-w-[1400px] mx-auto px-6 pb-4">
-             {/* Footer Ad Unit */}
-             <AdUnit slotId="FOOTER_AD" format="auto" />
-          </div>
           
           <Footer onNavigate={handleNavigate} />
         </div>
