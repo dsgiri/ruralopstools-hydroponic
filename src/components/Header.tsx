@@ -21,7 +21,7 @@ export function Header({ onNavigate, isMobileMenuOpen, setIsMobileMenuOpen }: He
           className="flex items-baseline gap-2 cursor-pointer"
           onClick={() => onNavigate('home')}
         >
-          <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-emerald-400 hidden sm:inline-block">Rural Utility Cost</span>
+          <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-emerald-400 hidden sm:inline-block">Rural Ops Tools</span>
           <span className="text-lg sm:text-xl font-light sm:border-l border-emerald-700 sm:pl-3 tracking-tight">Hydroponic</span>
         </div>
       </div>

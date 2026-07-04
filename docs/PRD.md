@@ -1,7 +1,7 @@
 # Product Requirements Document (PRD)
 
 ## Product Vision
-Hydroponic economics, nutrient, and production planning hub for ruralutilitycost.com.
+Hydroponic economics, nutrient, and production planning hub for ruralopstools.com.
 
 ## User Personas
 - Hydroponic growers

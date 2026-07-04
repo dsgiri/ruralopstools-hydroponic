@@ -57,19 +57,19 @@ export function Sidebar({ currentView, onNavigate, className, onCloseMobile }: S
       <div className="bg-white rounded-lg border border-slate-200 p-4 shadow-sm mb-4">
         <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4">Ecosystem Tools</h3>
         <nav className="space-y-1">
-          <a href="https://forecast.ruralutilitycost.com/" target="_blank" rel="noopener noreferrer" className={cn(navClass, "text-slate-500 hover:bg-slate-50 hover:text-slate-900")}>
+          <a href="https://forecast.ruralopstools.com/" target="_blank" rel="noopener noreferrer" className={cn(navClass, "text-slate-500 hover:bg-slate-50 hover:text-slate-900")}>
             <ExternalLink className="w-4 h-4 text-slate-400" />
             Forecast
           </a>
-          <a href="https://plan.ruralutilitycost.com/" target="_blank" rel="noopener noreferrer" className={cn(navClass, "text-slate-500 hover:bg-slate-50 hover:text-slate-900")}>
+          <a href="https://plan.ruralopstools.com/" target="_blank" rel="noopener noreferrer" className={cn(navClass, "text-slate-500 hover:bg-slate-50 hover:text-slate-900")}>
             <ExternalLink className="w-4 h-4 text-slate-400" />
             Plan
           </a>
-          <a href="https://whatif.ruralutilitycost.com/" target="_blank" rel="noopener noreferrer" className={cn(navClass, "text-slate-500 hover:bg-slate-50 hover:text-slate-900")}>
+          <a href="https://whatif.ruralopstools.com/" target="_blank" rel="noopener noreferrer" className={cn(navClass, "text-slate-500 hover:bg-slate-50 hover:text-slate-900")}>
             <ExternalLink className="w-4 h-4 text-slate-400" />
             WhatIf
           </a>
-          <a href="https://predictor.ruralutilitycost.com/" target="_blank" rel="noopener noreferrer" className={cn(navClass, "text-slate-500 hover:bg-slate-50 hover:text-slate-900")}>
+          <a href="https://predictor.ruralopstools.com/" target="_blank" rel="noopener noreferrer" className={cn(navClass, "text-slate-500 hover:bg-slate-50 hover:text-slate-900")}>
             <ExternalLink className="w-4 h-4 text-slate-400" />
             Predictor
           </a>

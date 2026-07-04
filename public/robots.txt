@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hydroponic.ruralutilitycost.com/sitemap.xml
+Sitemap: https://hydroponic.ruralopstools.com/sitemap.xml

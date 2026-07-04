@@ -1,6 +1,7 @@
 # Project Task Board (TASKS.md)
 
 ## Active Sprint
+- [x] Task 4: Change all references from RuralUtilityCost to RuralOpsTools <!-- id: 004 -->
 - [ ] Task 1: Setup database schema for users <!-- id: 001 -->
 - [ ] Task 2: Create POST /auth/register endpoint <!-- id: 002 -->
 

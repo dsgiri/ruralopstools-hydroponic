@@ -24,7 +24,7 @@ export function CookieBanner() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <p id="cookie-banner-text" className="text-sm text-slate-300 leading-relaxed max-w-4xl">
-          We use cookies and analytical tracking to improve your experience and analyze site traffic on the Rural Utility Cost platform. By continuing to use this site, you agree to our GDPR-compliant tracking policies as detailed in our Privacy Policy.
+          We use cookies and analytical tracking to improve your experience and analyze site traffic on the Rural Ops Tools platform. By continuing to use this site, you agree to our GDPR-compliant tracking policies as detailed in our Privacy Policy.
         </p>
       </div>
       <button 

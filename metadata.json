@@ -1,6 +1,6 @@
 {
   "name": "Hydroponic",
-  "description": "Hydroponic economics, nutrient, and production planning hub for ruralutilitycost.com.",
+  "description": "Hydroponic economics, nutrient, and production planning hub for ruralopstools.com.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

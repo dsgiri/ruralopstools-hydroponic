@@ -1,7 +1,7 @@
 # SEO Strategy Document
 
 ## Keywords
-hydroponic, rural utility cost, CEA, controlled environment agriculture, hydroponic cost estimator, nutrient calculator, vertical farming, indoor growing, ROI calculator
+hydroponic, rural ops tools, CEA, controlled environment agriculture, hydroponic cost estimator, nutrient calculator, vertical farming, indoor growing, ROI calculator
 
 ## Meta Formulas
 - Title: `[Tool Name] | Hydroponic Planning Hub`
