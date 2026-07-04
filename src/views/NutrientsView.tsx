@@ -12,7 +12,7 @@ export function NutrientsView() {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Nutrient Solution Calculator</h2>
+        <h1 className="text-2xl font-bold text-slate-900">Nutrient Solution Calculator</h1>
         <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-1">Calculate stock solution required to reach target EC for your reservoir.</p>
       </div>
 
@@ -72,6 +72,41 @@ export function NutrientsView() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="bg-slate-50 rounded-lg border border-slate-200 p-5 shadow-sm space-y-4">
+        <h3 className="text-sm font-bold text-slate-800">Logic & Formulas</h3>
+        <ul className="text-xs text-slate-600 space-y-2 list-disc pl-4">
+          <li><strong>Rate per gallon:</strong> (Target EC / 1.0) × (100 / Stock Concentration) × 10.</li>
+          <li><strong>Total mL Needed:</strong> Rate per gallon × Reservoir Volume (Gal).</li>
+          <li><strong>Assumption:</strong> Formula assumes a standard balanced Part A/B mixture where 10ml/gal of a 100x solution roughly yields 1.0 EC.</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm space-y-4">
+        <h3 className="text-sm font-bold text-slate-800">Frequently Asked Questions</h3>
+        <div className="space-y-3 text-xs text-slate-600">
+          <div>
+            <strong className="block text-slate-700">Does this account for my water source's starting EC?</strong>
+            <p>No. You must measure the starting EC of your source water and subtract it from your target EC to determine the actual EC addition required from your nutrients.</p>
+          </div>
+          <div>
+            <strong className="block text-slate-700">What is Stock Concentration?</strong>
+            <p>This is the concentration level of your concentrated nutrient solution (often 100x or 200x). Check your manufacturer's label.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-emerald-50 rounded-lg border border-emerald-100 p-5 shadow-sm">
+        <h3 className="text-sm font-bold text-emerald-900 mb-2">Related Tools</h3>
+        <div className="flex flex-wrap gap-3 text-xs">
+          <a href="/ecph" className="text-emerald-700 hover:text-emerald-900 underline font-medium">EC/pH Target Tool</a>
+          <a href="/estimate" className="text-emerald-700 hover:text-emerald-900 underline font-medium">Setup Cost Estimator</a>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <p className="text-[10px] text-slate-400 italic">Disclaimer: Nutrient planning outcomes depend on water source quality, salt grades, and environmental factors. Do not rely solely on this for actual agronomy without measuring reservoir EC.</p>
       </div>
     </div>
   );

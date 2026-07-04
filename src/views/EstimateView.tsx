@@ -15,7 +15,7 @@ export function EstimateView() {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Hydroponic Cost Estimator</h2>
+        <h1 className="text-2xl font-bold text-slate-900">Hydroponic Cost Estimator</h1>
         <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-1">Estimate capital setup costs and baseline electricity expenses based on system footprint.</p>
       </div>
 
@@ -81,6 +81,41 @@ export function EstimateView() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="bg-slate-50 rounded-lg border border-slate-200 p-5 shadow-sm space-y-4">
+        <h3 className="text-sm font-bold text-slate-800">Logic & Formulas</h3>
+        <ul className="text-xs text-slate-600 space-y-2 list-disc pl-4">
+          <li><strong>CapEx:</strong> Growing Area (sq ft) × System Cost Factor ($/sq ft).</li>
+          <li><strong>Monthly Power:</strong> Growing Area (sq ft) × Power Consumption Factor (kWh/sq ft/month) × Electricity Rate ($/kWh).</li>
+          <li><strong>Annual Power:</strong> Monthly Power × 12 months.</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm space-y-4">
+        <h3 className="text-sm font-bold text-slate-800">Frequently Asked Questions</h3>
+        <div className="space-y-3 text-xs text-slate-600">
+          <div>
+            <strong className="block text-slate-700">What does the CapEx cover?</strong>
+            <p>The estimated capital expense includes primary structural hardware, basic reservoirs, basic plumbing, and standard lighting per square foot. It does not include building construction or land.</p>
+          </div>
+          <div>
+            <strong className="block text-slate-700">Is labor included in the OptEx?</strong>
+            <p>No, the operational expense shown here isolates electricity costs. Labor, nutrients, seeds, and water utility costs are separate variables not included in this simple calculation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-emerald-50 rounded-lg border border-emerald-100 p-5 shadow-sm">
+        <h3 className="text-sm font-bold text-emerald-900 mb-2">Related Tools</h3>
+        <div className="flex flex-wrap gap-3 text-xs">
+          <a href="/profit" className="text-emerald-700 hover:text-emerald-900 underline font-medium">Profitability Forecaster</a>
+          <a href="/ecph" className="text-emerald-700 hover:text-emerald-900 underline font-medium">EC/pH Target Tool</a>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <p className="text-[10px] text-slate-400 italic">Disclaimer: This calculator provides generalized estimates based on regional averages. Actual costs will vary. Please consult with a contractor or agricultural economist for comprehensive planning.</p>
       </div>
     </div>
   );

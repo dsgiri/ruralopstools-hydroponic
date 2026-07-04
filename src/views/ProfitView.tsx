@@ -15,7 +15,7 @@ export function ProfitView() {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Crop Profitability & Output</h2>
+        <h1 className="text-2xl font-bold text-slate-900">Crop Profitability & Output</h1>
         <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-1">Forecast annual yield and gross revenue based on crop metrics and cycle velocity.</p>
       </div>
 
@@ -78,6 +78,41 @@ export function ProfitView() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="bg-slate-50 rounded-lg border border-slate-200 p-5 shadow-sm space-y-4">
+        <h3 className="text-sm font-bold text-slate-800">Logic & Formulas</h3>
+        <ul className="text-xs text-slate-600 space-y-2 list-disc pl-4">
+          <li><strong>Yield (Lbs/Cycle):</strong> Grow Area (sq ft) × Average Yield (Lbs/sq ft).</li>
+          <li><strong>Annual Yield (Lbs):</strong> Yield (Lbs/Cycle) × Cycles per Year.</li>
+          <li><strong>Estimated Gross Revenue:</strong> Annual Yield (Lbs) × Market Price ($/lb).</li>
+        </ul>
+      </div>
+
+      <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm space-y-4">
+        <h3 className="text-sm font-bold text-slate-800">Frequently Asked Questions</h3>
+        <div className="space-y-3 text-xs text-slate-600">
+          <div>
+            <strong className="block text-slate-700">Does this calculate net profit?</strong>
+            <p>No, this tool provides estimated Gross Revenue. To find your net profit, you must subtract CapEx depreciation, utility OpEx, labor, nutrients, and packaging costs from this figure.</p>
+          </div>
+          <div>
+            <strong className="block text-slate-700">How accurate is the market price?</strong>
+            <p>The built-in market prices are regional averages. You should adjust the revenue expectations based on your specific off-taker agreements or direct-to-consumer pricing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-emerald-50 rounded-lg border border-emerald-100 p-5 shadow-sm">
+        <h3 className="text-sm font-bold text-emerald-900 mb-2">Related Tools</h3>
+        <div className="flex flex-wrap gap-3 text-xs">
+          <a href="/estimate" className="text-emerald-700 hover:text-emerald-900 underline font-medium">Setup Cost Estimator</a>
+          <a href="/compare" className="text-emerald-700 hover:text-emerald-900 underline font-medium">System Scenario Comparison</a>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <p className="text-[10px] text-slate-400 italic">Disclaimer: These projections are based on idealized growing conditions and stable market prices. Unforeseen biological or market risks are not accounted for. Verify with an agronomist.</p>
       </div>
     </div>
   );
