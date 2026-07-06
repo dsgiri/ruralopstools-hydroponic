@@ -1,5 +1,5 @@
 import { cn } from '@/utils';
-import { Home, Calculator, Droplets, Activity, Leaf, Layers, Heart, Info, Scale, ExternalLink } from 'lucide-react';
+import { Home, Calculator, Droplets, Activity, Leaf, Layers, Star, Info, Scale, ExternalLink } from 'lucide-react';
 
 interface SidebarProps {
   currentView: string;
@@ -16,7 +16,7 @@ export function Sidebar({ currentView, onNavigate, className, onCloseMobile }: S
     { id: 'ecph', label: 'EC / pH Planner', icon: Activity },
     { id: 'profit', label: 'Profit & ROI', icon: Leaf },
     { id: 'compare', label: 'System Compare', icon: Layers },
-    { id: 'favorites', label: 'Favorites', icon: Heart },
+    { id: 'favorites', label: 'Favorites', icon: Star },
   ];
   
   const systemItems = [

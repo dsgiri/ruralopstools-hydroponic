@@ -66,6 +66,22 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const getAppName = (view: string) => {
+    switch(view) {
+      case 'home': return 'Hub Overview';
+      case 'estimate': return 'Setup Cost Estimator';
+      case 'nutrients': return 'Nutrient Calculator';
+      case 'profit': return 'Profitability Forecaster';
+      case 'ecph': return 'EC/pH Target Planner';
+      case 'compare': return 'System Comparison';
+      case 'favorites': return 'Saved Configurations';
+      case 'about': return 'About';
+      case 'legal': return 'Legal';
+      case 'contact': return 'Contact';
+      default: return 'Hydroponic Planning Hub';
+    }
+  };
+
   const renderView = () => {
     switch (currentView) {
       case 'home':
@@ -99,9 +115,10 @@ export default function App() {
         Skip to main content
       </a>
       <Header 
-        onNavigate={handleNavigate} 
+        onNavigate={handleNavigate}
         isMobileMenuOpen={isMobileMenuOpen}
         setIsMobileMenuOpen={setIsMobileMenuOpen}
+        currentView={currentView}
       />
       
       <div className="flex flex-1 overflow-hidden relative">
@@ -129,9 +146,8 @@ export default function App() {
         </div>
         
         {/* Main Content */}
-        <div className="flex-1 overflow-y-auto flex flex-col pt-4">
-          
-          <main id="main-content" tabIndex={-1} className="flex-1 px-6 pb-6 w-full max-w-[1400px] mx-auto z-0 outline-none">
+        <div className="flex-1 overflow-y-auto flex flex-col relative">
+          <main id="main-content" tabIndex={-1} className="flex-1 px-6 pb-6 pt-4 w-full max-w-[1400px] mx-auto z-0 outline-none">
             {renderView()}
           </main>
           

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ToolItem } from '@/types';
-import { Heart, Calculator, Droplets, Activity, Leaf, Layers, Zap, TrendingUp } from 'lucide-react';
+import { Star, Calculator, Droplets, Activity, Leaf, Layers, Zap, TrendingUp } from 'lucide-react';
 import { cn } from '@/utils';
 
 interface ToolCardProps {
@@ -37,7 +37,7 @@ export function ToolCard({ tool, isFavorite, onToggleFavorite, onOpen }: ToolCar
           )}
           aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
         >
-          <Heart className="w-4 h-4" strokeWidth={isFavorite ? 2 : 2} fill={isFavorite ? "currentColor" : "none"} />
+          <Star className="w-4 h-4" strokeWidth={isFavorite ? 2 : 2} fill={isFavorite ? "currentColor" : "none"} />
         </button>
       </div>
       
