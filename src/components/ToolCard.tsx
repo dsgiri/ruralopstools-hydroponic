@@ -3,7 +3,7 @@ import { ToolItem } from '@/types';
 import { Star, Calculator, Droplets, Activity, Leaf, Layers, Zap, TrendingUp } from 'lucide-react';
 import { cn } from '@/utils';
 
-interface ToolCardProps {
+interface ToolCardProps { key?: React.Key;
   tool: ToolItem;
   isFavorite: boolean;
   onToggleFavorite: (id: string, e: React.MouseEvent) => void;

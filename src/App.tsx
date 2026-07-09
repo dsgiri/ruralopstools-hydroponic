@@ -50,6 +50,21 @@ export default function App() {
   useEffect(() => {
     document.title = VIEW_TITLES[currentView] || 'Hydroponic Planning Hub';
     trackEvent('page_view', { page_path: `/${currentView}` });
+    
+    // Track tool_launched
+    switch(currentView) {
+      case 'estimate': 
+        trackEvent('tool_launched', { tool_name: 'Startup Cost Estimator' });
+        trackEvent('tool_launched', { tool_name: 'Electricity Cost Calculator' });
+        break;
+      case 'nutrients': trackEvent('tool_launched', { tool_name: 'Nutrient Solution Planner' }); break;
+      case 'ecph': trackEvent('tool_launched', { tool_name: 'EC/pH Target Planner' }); break;
+      case 'profit': 
+        trackEvent('tool_launched', { tool_name: 'Crop Profitability Calculator' }); 
+        trackEvent('tool_launched', { tool_name: 'ROI & Payback Period' }); 
+        break;
+      case 'compare': trackEvent('tool_launched', { tool_name: 'System Comparison Tool' }); break;
+    }
   }, [currentView]);
 
   const toggleFavorite = (id: string, e: React.MouseEvent) => {

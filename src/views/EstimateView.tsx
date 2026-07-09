@@ -1,16 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SYSTEMS } from '@/data';
+import { trackEvent } from '@/utils';
 
 export function EstimateView() {
   const [area, setArea] = useState<number>(1000);
   const [systemId, setSystemId] = useState<string>(SYSTEMS[0].id);
   const [elecRate, setElecRate] = useState<number>(0.12);
-
+  
   const selectedSys = SYSTEMS.find(s => s.id === systemId) || SYSTEMS[0];
   
   const setupCost = area * selectedSys.costPerSqFt;
   const powerCostPerMonth = area * selectedSys.powerCostPerSqFtMth * elecRate;
   const annualPower = powerCostPerMonth * 12;
+
+  useEffect(() => {
+    trackEvent('tool_completed', { tool_name: 'Startup Cost Estimator' });
+    trackEvent('tool_completed', { tool_name: 'Electricity Cost Calculator' });
+  }, [area, systemId, elecRate]);
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -84,12 +90,19 @@ export function EstimateView() {
       </div>
 
       <div className="bg-slate-50 rounded-lg border border-slate-200 p-5 shadow-sm space-y-4">
-        <h3 className="text-sm font-bold text-slate-800">Logic & Formulas</h3>
-        <ul className="text-xs text-slate-600 space-y-2 list-disc pl-4">
+        <h3 className="text-sm font-bold text-slate-800">Logic, Formulas & Insights</h3>
+        <ul className="text-xs text-slate-600 space-y-2 list-disc pl-4 mb-4">
           <li><strong>CapEx:</strong> Growing Area (sq ft) × System Cost Factor ($/sq ft).</li>
+          <li><strong>Electricity Formula:</strong> <code className="bg-slate-200 px-1 py-0.5 rounded">lighting (W × hours/day × days) + pump/HVAC load, converted to kWh × price/kWh</code></li>
           <li><strong>Monthly Power:</strong> Growing Area (sq ft) × Power Consumption Factor (kWh/sq ft/month) × Electricity Rate ($/kWh).</li>
           <li><strong>Annual Power:</strong> Monthly Power × 12 months.</li>
         </ul>
+        <div className="text-xs text-slate-600 bg-white p-3 rounded border border-slate-200 space-y-2">
+          <div>
+            <strong className="block text-slate-800 mb-1">LED vs Legacy HID Insight:</strong>
+            Research indicates that modern LED grow lights can cut electricity usage by 40-60% compared to older HID (High-Intensity Discharge) lighting setups. This dramatically lowers the OpEx burden on your facility.
+          </div>
+        </div>
       </div>
 
       <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm space-y-4">
